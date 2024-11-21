@@ -211,7 +211,8 @@ void ownCloudGui::slotOpenSettingsDialog()
 
 void ownCloudGui::slotOpenMainDialog()
 {
-    _tray->showWindow();
+    _tray->openSettings();
+    //_tray->showWindow();
 }
 
 void ownCloudGui::slotTrayClicked(QSystemTrayIcon::ActivationReason reason)
@@ -229,7 +230,8 @@ void ownCloudGui::slotTrayClicked(QSystemTrayIcon::ActivationReason reason)
             if (AccountManager::instance()->accounts().isEmpty()) {
                 this->slotOpenSettingsDialog();
             } else {
-                _tray->showWindow();
+                //_tray->showWindow();
+                _tray->openSettings();
             }
 
         }
